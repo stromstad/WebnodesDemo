@@ -1,0 +1,26 @@
+﻿@model FrameworkMVCRazor.Models.ViewModels.SearchViewModel
+@using WAF.Presentation.Web
+
+
+<h2>Search</h2>
+@using (Html.BeginForm("Search", "Search"))
+{
+@Html.TextBox("searchString")
+@Html.Hidden("nid", Model.Content.NodeId)
+<input type="submit" value="Search" />
+}
+
+@if(Model.SearchResult.Count > 0)
+{
+    <h2>Results</h2>
+<ul>
+    @foreach (var res in Model.SearchResult)
+    {
+    <li>
+        <h3><a href="@WAFContext.GetUrl(res.Content)">@res.Name</a></h3>
+        @Html.Raw(@res.FormatSample(res.Body, 255, "<b>", "</b>"))
+    </li>
+    }
+</ul>
+}
+

@@ -1,0 +1,86 @@
+body
+{
+    font-family: Verdana;
+    font-size: 12px;
+}
+.Page
+{
+    width: 700px;
+}
+.LeftPart
+{
+    width: 200px;
+    float: left;
+}
+.RightPart
+{
+    width: 500px;
+    float: left;
+}
+.SiteTitle
+{
+    margin: 10px 10px 25px 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.Content
+{
+    float: left;
+}
+.Menu
+{
+    margin: 10px;
+    float: left;
+    font-size:12px;
+    font-family:Verdana;
+}
+.IngressImage
+{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
+}
+.IngressText
+{
+    margin: 5px;
+    margin-bottom: 15px;
+    font-size:14px;
+}
+.BodyText
+{
+    margin: 5px;
+}
+.Menu a:link{
+    color:#676767;
+     text-decoration:none;
+}
+.Menu a:visited{
+    color:#676767;
+     text-decoration:none;
+}
+.Menu a:hover{
+    color:#676767;
+    text-decoration:underline;
+}
+
+.MenuItem1 a
+{
+    font-size: 14px;
+    line-height:22px;
+}
+.MenuItem2 a
+{
+    font-size: 12px;
+    margin-left: 20px;
+    line-height:20px;
+}
+.MenuItem3 a
+{
+    font-size: 11px;
+    margin-left: 35px;
+    line-height:18px;
+}
+.MenuItemSelected a
+{
+    font-weight: bold;
+}

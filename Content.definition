@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definition Name="Website" Build="12" Guid="6999d445-e4f6-4f36-b81c-a9c9df0a1558">
+  <Cultures>
+    <Culture LCID="1033" Name="English" />
+    <Culture LCID="1044" Name="NorwegianBO" />
+  </Cultures>
+  <ContentClasses>
+    <ContentClass Guid="99219e40-ccf2-4f38-95ec-8a1e723fc43f" ClassName="HelloWorld" Namespace="MySite" TableName="hello_world">
+      <Properties>
+        <Property Guid="e7c45ff5-6a2b-4902-ba07-2659ce79b85f" CodeName="TypeOfHello" PropertyClassGuid="7d08c6fb-28f7-4d30-b407-439e018d2402">
+          <DataValues>
+            <Integer Guid="74ff0f17-7d29-45ff-af98-e64511eb6abe" Key="Value" Name="type_of_hello" />
+          </DataValues>
+          <Globalization>
+            <Lang LCID="1044" Name="Type hilsen" />
+            <Lang LCID="1033" Name="Type of greeting" />
+          </Globalization>
+          <Settings>
+            <EnumerationReference Key="Enumeration" Value="f2157e5a-06a8-4694-99f2-ab59ff675be5" />
+          </Settings>
+        </Property>
+        <Property Guid="bb08276f-e760-4aa2-a98f-6d2fd00d8e22" CodeName="Ingress" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="d8befa00-9c1d-4fff-9f82-01865a3c5ef1" Key="Value" Name="ingress" />
+          </DataValues>
+          <Globalization>
+            <Lang LCID="1033" Name="Short ingress" />
+            <Lang LCID="1044" Name="Kort ingress" />
+          </Globalization>
+        </Property>
+        <Property Guid="d8ae88fe-4a85-4eae-a387-f79ab1472d26" CodeName="IngressPicture" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="6db2fc03-d37f-4c84-8af4-8767a0eb7e2b" Key="Filename" Name="ingress_picture_filename" />
+            <ShortString Guid="62a9a907-32dc-48d1-a301-a4b6d976ee68" Key="Type" Name="ingress_picture_type_name" />
+            <ShortString Guid="ddb93c77-7942-4f38-acba-3ef7a185b719" Key="Extension" Name="ingress_picture_extension" />
+            <Float Guid="159b0435-0c87-4274-8497-60dd90ab411b" Key="Bytes" Name="ingress_picture_bytes" />
+            <LongString Guid="aa637b67-48f8-43e5-8da8-64293b5eb346" Key="Info" Name="ingress_picture_info" />
+            <Integer Guid="7243e380-2fe4-4af5-a959-b763c5bbe85d" Key="Reference" Name="ingress_picture_int" />
+          </DataValues>
+          <Globalization>
+            <Lang LCID="1044" Name="Ingressbilde" />
+            <Lang LCID="1033" Name="Ingress picture" />
+          </Globalization>
+        </Property>
+        <Property Guid="eb985ce1-c69a-473e-b250-95d0eeafb8f4" CodeName="Content" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="300e0041-8116-4721-8b17-c5afec2daf82" Key="Value" Name="content" />
+          </DataValues>
+          <Globalization>
+            <Lang LCID="1044" Name="Innhold" />
+            <Lang LCID="1033" Name="Content" />
+          </Globalization>
+        </Property>
+        <Property Guid="1e881cf8-49c7-4496-89c8-9cfebe1fb093" CodeName="Files" PropertyClassGuid="db1239e2-c255-499f-9038-1ca8e460901e">
+          <Globalization>
+            <Lang LCID="1033" Name="Files" />
+            <Lang LCID="1044" Name="Filer" />
+          </Globalization>
+        </Property>
+        <Property Guid="38c0ea84-3604-4fa5-af27-8419115f4831" CodeName="Quotes" PropertyClassGuid="d13fc7be-804b-4ebf-a69a-9823c8dd71da">
+          <Settings>
+            <InnerContentClassReferences Key="InnerContentClasses">
+              <Classes>
+                <ClassReference ClassGuid="e14fe1c4-70d5-43dc-8e7a-4df83d5f19a9" />
+              </Classes>
+            </InnerContentClassReferences>
+          </Settings>
+        </Property>
+        <Property Guid="e3b65c50-4cc3-4de5-b7b2-5cac97bbfa6c" CodeName="RelatedArticles" PropertyClassGuid="c38c7283-5478-49be-be77-69bd5a7b99a6">
+          <Settings>
+            <RelationReference Key="Relation" Value="97e1bea7-8f10-48e3-aed3-0d240b5e391d" />
+          </Settings>
+        </Property>
+      </Properties>
+      <InheritGuid>15264b6f-e646-49c4-beb8-9e4911b4f22c</InheritGuid>
+    </ContentClass>
+    <ContentClass Guid="e14fe1c4-70d5-43dc-8e7a-4df83d5f19a9" ClassName="Quote" Namespace="MySite" TableName="quote">
+      <Properties>
+        <Property Guid="2298c8c8-b594-436a-8507-295780be610c" CodeName="Title" PropertyClassGuid="8fce161d-836d-4dc8-bc89-f10baaa069b8">
+          <DataValues>
+            <LongString Guid="b4c88ad8-7fb2-45d8-838a-a2119e0aa6ed" Key="Value" Name="title" />
+          </DataValues>
+        </Property>
+        <Property Guid="ca3581d1-994d-4183-a7f7-c5829b31bb3e" CodeName="Text" PropertyClassGuid="004506fc-4a9f-4c0a-8bd0-bfd16fa76876">
+          <DataValues>
+            <LongString Guid="f0f70939-ce38-4f55-af41-9e34515c1b64" Key="Value" Name="text" />
+          </DataValues>
+        </Property>
+        <Property Guid="de2ba9dc-00fb-473e-a99a-49191b1c1211" CodeName="Image" PropertyClassGuid="0830d617-f5ee-4266-8f54-71e7867c5225">
+          <DataValues>
+            <ShortString Guid="4d9011b7-0658-4a0a-9ab0-ffe02703c975" Key="Filename" Name="image_filename" />
+            <ShortString Guid="7cdae8a1-ab7f-4fb9-a560-e51e223fe90c" Key="Type" Name="image_type_name" />
+            <ShortString Guid="aa9e38e6-da90-42e9-b18b-b3b5a829e2d9" Key="Extension" Name="image_extension" />
+            <Float Guid="d15db98b-148f-4d63-9bc8-5e8631ab86c5" Key="Bytes" Name="image_bytes" />
+            <LongString Guid="c59b87d5-24cc-4535-8b97-72a1cd62f1c1" Key="Info" Name="image_info" />
+            <Integer Guid="7aecc3eb-ca19-4ea8-b481-865b3a91618b" Key="Reference" Name="image_int" />
+          </DataValues>
+        </Property>
+        <Property Guid="fc16c7f7-167e-4023-93e2-4fbcf44e4dff" CodeName="MoreLink" PropertyClassGuid="c0eec912-aa39-4df2-bb43-a8d15c493d03">
+          <DataValues>
+            <ShortString Guid="3d53c493-e1c0-4380-a290-2a1401ea7de0" Key="Value" Name="more_link" />
+          </DataValues>
+        </Property>
+      </Properties>
+      <ClassType>InnerContentClass</ClassType>
+      <InheritGuid>202372f4-8e04-4f51-b7c9-13553a307b85</InheritGuid>
+    </ContentClass>
+  </ContentClasses>
+  <ContentClassChanges>
+    <ContentClassChange ChangeGuid="7c528e27-4f24-44be-a6b6-2766bb1834d8" Guid="5dc18102-e703-4de2-9665-0b5c6726fa82">
+      <PropertyChanges>
+        <PropertyChange Guid="71d415bc-e972-495c-82c0-3ca760a6ab0c" ChangeGuid="1a03729b-ae12-4cbe-85ba-a02b986d3d18">
+          <Settings>
+            <Boolean Key="HideInEdit" Value="True" />
+          </Settings>
+        </PropertyChange>
+      </PropertyChanges>
+    </ContentClassChange>
+  </ContentClassChanges>
+  <Enumerations>
+    <Enumeration Guid="f2157e5a-06a8-4694-99f2-ab59ff675be5" CodeName="TypeOfHello" Namespace="MySite">
+      <Values>
+        <Value Guid="cff5a151-ae40-4be6-a3b5-27b715d1523a" CodeName="Velkommen" />
+        <Value Guid="38d9333d-dc97-4199-972e-96f3ab06b35d" CodeName="Welcome" Value="1" />
+        <Value Guid="dca88aeb-7088-4a67-80d0-352797663c95" CodeName="Welkom" Value="2" />
+        <Value Guid="e5d9f4c5-a76b-41d8-b95e-4a59d74628d6" CodeName="Bienvenue" Value="3" />
+      </Values>
+    </Enumeration>
+  </Enumerations>
+  <Relations>
+    <Relation Guid="97e1bea7-8f10-48e3-aed3-0d240b5e391d" ClassName="RelHelloWorldArticles" Namespace="MySite" TableName="rel_rel_hello_world_articles">
+      <ClassGuidChildren>
+        <ClassReference ClassGuid="7c528e27-4f24-44be-a6b6-2766bb1834d8" />
+      </ClassGuidChildren>
+      <ClassGuidParents>
+        <ClassReference ClassGuid="99219e40-ccf2-4f38-95ec-8a1e723fc43f" />
+      </ClassGuidParents>
+      <NameChildren>child_id</NameChildren>
+      <NameParents>parent_id</NameParents>
+    </Relation>
+  </Relations>
+  <Scripts>
+    <InternalScript Guid="87d3d975-d4ea-4cc8-8477-07153378bc4c" RunDuringSave="True" Active="True" Id="webnodes.CodeGeneration" />
+  </Scripts>
+  <Options>
+    <OData>
+      <Settings>
+        <Boolean Key="ODataExposeAllProperties" />
+        <Boolean Key="ODataExposeAllTypes" />
+        <Boolean Key="ODataEnabled" />
+      </Settings>
+    </OData>
+  </Options>
+</Definition>

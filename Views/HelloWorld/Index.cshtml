@@ -1,0 +1,44 @@
+﻿@model FrameworkMVCRazor.Models.ViewModels.ArticlesViewModel
+@using WAF.Presentation.Web
+@using WAF.Engine.Content.Native
+
+@{
+    var adjust = new WAF.Engine.Property.ImageAdjustments();
+    adjust.CornerRadius = 100;
+    adjust.CanvasX = 200;
+    adjust.CanvasY = 200;
+}
+
+<h1>
+    @Model.Name
+</h1>
+<h2>
+    Related Articles
+</h2>
+
+@foreach (var art in Model.Content.RelatedArticles.Get())
+{
+<a href="@WAFContext.GetUrl(art)">
+    <li>
+        @art.Name
+    </li>
+</a>
+}
+
+<ul>
+    @foreach (var article in Model.Articles)
+    {
+
+        <a href="@WAFContext.GetUrl(article)">
+            <li>@article.Name</li>
+        </a>
+    }
+</ul>
+
+<br /><br />
+@foreach (var image in WAFContext.Session.GetContents<ImageFile>())
+{
+    <a href="@WAFContext.GetUrl(image)">
+        @Html.Raw(@image.File.GetImageHtml(adjust))
+    </a>
+}

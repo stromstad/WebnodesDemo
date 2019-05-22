@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webnodes MVC Razor Demo - @Model.Name</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" id="theme" />
+</head>
+<body>
+    <div class="Page">
+        <div class="LeftPart">
+            <div class="SiteTitle">
+                @Model.Name
+            </div>
+            <div class="Menu">
+                @Html.Menu()
+            </div>
+        </div>
+        <div class="RightPart">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
